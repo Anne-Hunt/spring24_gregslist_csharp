@@ -95,5 +95,23 @@ CREATE TABLE houses(
  description VARCHAR(255) NOT NULL,
  price INT NOT NULL,
 createdAt DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT 'Time Created',
-updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update',
+updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Last Update'
 );
+
+INSERT INTO houses (
+  sqft,
+  bedrooms,
+  bathrooms,
+  imgUrl,
+  description,
+  price,
+  creatorId
+)
+VALUES(
+  1200,
+  3,
+  2,
+  "https://i.ebayimg.com/images/g/KJ4AAOSwKX1jb5yh/s-l1200.webp",
+  "Large house, big bird in yard, large nest nearby",
+  12000000,
+)
